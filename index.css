@@ -1,0 +1,29 @@
+#the-canvas {
+    background-image: url('daniel-gianino-fairy-forest1.gif');
+    background-size:cover;
+    background-position-x: left;
+} 
+.firefly1{
+    position: absolute;
+    left:602.6px;
+    top:310px;
+    height:50px;
+    width:50px;
+    
+}
+.firefly2{
+    position: absolute;
+    left:183px;
+    top:130px;
+    height:50px;
+    width:50px;
+    
+}
+.firefly3{
+    position: absolute;
+    left:988px;
+    top:500px;
+    height:50px;
+    width:50px;
+    
+}
