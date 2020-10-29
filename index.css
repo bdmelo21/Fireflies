@@ -5,25 +5,87 @@
 } 
 .firefly1{
     position: absolute;
-    left:602.6px;
-    top:310px;
+    left:612.6px;
+    top:330px;
     height:50px;
     width:50px;
     
 }
 .firefly2{
     position: absolute;
-    left:183px;
-    top:130px;
+    left:195px;
+    top:150px;
     height:50px;
     width:50px;
     
 }
 .firefly3{
     position: absolute;
-    left:988px;
-    top:500px;
+    left:998px;
+    top:510px;
     height:50px;
     width:50px;
     
+}
+.L2firefly1 {
+    position: absolute;
+    left:500.6px;
+    top:100px;
+    height:50px;
+    width:50px;
+}
+.L2firefly2 {
+    position: absolute;
+    left:330.6px;
+    top:610px;
+    height:50px;
+    width:50px;
+}
+.board {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rightdiv {
+    float:right;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.heart{
+    width: 50%;
+}
+body{
+    display:flex;
+}
+.level1{
+    text-align: center;
+    font-family: helvetica;
+    font-size: 30px;
+}
+.lifes {
+    font-family: helvetica;
+    font-size:20px;
+    letter-spacing: 1.5px;
+}
+.fireflies {
+    width:100px;
+    margin-right: 10px;
+}
+.Flex {
+    display:flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left:80px;
+}
+.Flex2 {
+    display:flex;
+    justify-content: center;
+}
+.nfireflies{
+    margin-top: 35px;
+    font-family: helvetica;
+    font-size: 20px;
+    letter-spacing: 1.5px;;
 }
