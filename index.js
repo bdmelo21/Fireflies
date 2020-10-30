@@ -23,7 +23,8 @@ function startGame() {
 }
 function updateCanvas(){
     switch(currentLevel) {
-        case 1: 
+        case 1:
+        document.getElementById('controls').play(); 
         firstLevel();
         isOnFirstPlaform();
         break
@@ -70,22 +71,20 @@ function isOnFirstPlaform() {
         currentGame.player.jumping =false;
     }
     else if((currentGame.player.y > 480 && currentGame.player.y<550) && (currentGame.player.x>60 && currentGame.player.x<310)) {
+        let balooncounter=true;
         currentGame.player.y =490;
         currentGame.player.vy = 0;
         currentGame.player.jumping =false;
         console.log (currentGame.player.counter);
         if (currentGame.player.counter===3){
+            if(balooncounter===true){
+            document.getElementById('baloon').play();
+            balooncounter=false;
+            }
             let imgem= new Image();
             imgem.src='balão.png';
             ctx.drawImage(imgem, 115, 390, 180, 130);
             setTimeout( () => {
-                debugger;
-                ctx.clearRect(0,0,1194,700);
-                currentGame.player.vy=0;
-                ctx.font="120px Arial";
-                ctx.fillStyle = "white";
-                ctx.textAlign = "center";
-                ctx.fillText("Level 1", 556, 405); 
                 setTimeout( () => {currentLevel = 2;
                 },2000);
         }, 2000);
@@ -179,7 +178,6 @@ function firstLevel() {
 }
 
 function secondLevel(){
-    currentGame.player.counter=0;
     if(currentGame.player.textocounter===true){
     document.getElementsByClassName('nfireflies')[0].innerHTML='0/2';
     }
@@ -191,7 +189,6 @@ function secondLevel(){
     pirilampo1L2.style.display='initial';
     }
     if (currentGame.player.gifcounter1===true){
-    console.log('hhhh');
     piriliampo2L2.style.display='initial';
     }
     let earth= new Image();
@@ -275,14 +272,16 @@ function secondLevel(){
 let damagecounter=true;
 let damagecounter1=true;
 function isPlatforms2() {
+balooncounter=true;
     if ((currentGame.player.y>68 && currentGame.player.y<132) && (currentGame.player.x>200 && currentGame.player.x<1060)) {
         currentGame.player.y = 75 ;
         currentGame.player.vy = 0;
         currentGame.player.jumping=false;
 }
-    else if ((currentGame.player.y>580 && currentGame.player.y<652) && (currentGame.player.x>0 && currentGame.player.x<220)) {
+    else if ((currentGame.player.y>580 && currentGame.player.y<652) && (currentGame.player.x>0 && currentGame.player.x<200)) {
         switch (damagecounter) {
             case true:
+            document.getElementById('damage').play();
             damagecounter=false;
             currentGame.lifes-=1;
             document.getElementsByClassName('lifes')[0].innerHTML=`x${currentGame.lifes}`;
@@ -292,18 +291,43 @@ function isPlatforms2() {
     else if ((currentGame.player.y>580 && currentGame.player.y<652) && (currentGame.player.x>430 && currentGame.player.x<620)){
         switch (damagecounter1) {
             case true:
+            document.getElementById('damage').play();
             damagecounter1=false;
             currentGame.lifes-=1;
             document.getElementsByClassName('lifes')[0].innerHTML=`x${currentGame.lifes}`;
             break;
         }
     }
+    else if ((currentGame.player.y>580 && currentGame.player.y<652) && (currentGame.player.x>640 && currentGame.player.x<900)){
+        console.log (currentGame.player.counter);
+        if (currentGame.player.counter===2) {
+            if(balooncounter===true){
+                document.getElementById('baloon').play();
+                balooncounter=false;
+            }
+            let imgem= new Image();
+            imgem.src='balãoR.png';
+            console.log ('lollll');
+            ctx.drawImage(imgem,810, 515, 180, 130);
+            setTimeout( () => {
+                currentGame.gameRunning=false;
+                ctx.clearRect(0,0,1140,700);
+                document.getElementById('controls').pause();
+                document.getElementById('lastaudio').play();
+                let backgroundlast=document.getElementById('the-canvas');
+                backgroundlast.style.background="url('thankyou.gif') no-repeat center";
+                backgroundlast.style.backgroundSize="cover";
+        }, 4000);
+        }
+    }
     else if (currentGame.lifes===0){
+        document.getElementById('damage').play();
         let pirilampo1L2=document.getElementsByClassName('L2firefly1')[0];
         let piriliampo2L2=document.getElementsByClassName('L2firefly2')[0];
         pirilampo1L2.style.display='none';
         piriliampo2L2.style.display='none';
         let background1=document.getElementById('the-canvas');
+        document.getElementById('controls').pause();
         background1.style.background= "url('background.png') no-repeat center";
         background1.style.backgroundSize="cover";
         currentGame.gameRunning=false;

@@ -79,7 +79,7 @@ class Player {
             else if ((this.y>68 && this.y<132)&&(this.x>470 && this.x<530)){
             let pirilampoL21 = document.getElementsByClassName('L2firefly1')[0];
             pirilampoL21.style.display= 'none';
-            this.counter+=1;
+            this.counter=1;
             this.gifcounter=false;
             this.textocounter=false;
             if (this.L2fireflycounter===true){
