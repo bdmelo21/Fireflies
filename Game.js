@@ -3,6 +3,6 @@ class game {
     this.player={};
     this.gameRunning = true;
     this.gameRunning1=true;
-    this.lifes = 2;
+    this.lifes = 1;
 }
 }
