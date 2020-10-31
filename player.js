@@ -54,7 +54,7 @@ class Player {
                     document.getElementById('fireflyaudio').play();
                     this.fireflycounter=false;
                 }
-                textopirilampo.innerHTML="1/3";
+                textopirilampo.innerHTML=`${this.counter}/3`;
             }
             else if ((this.y>290 && this.y<370) && (this.x>520)){
                 let pirilampo2 = document.getElementsByClassName('firefly1')[0];
@@ -64,7 +64,7 @@ class Player {
                     document.getElementById('fireflyaudio').play();
                     this.fireflycounter2=false;
                 }
-                textopirilampo.innerHTML="2/3";
+                textopirilampo.innerHTML=`${this.counter}/3`;
             }
             else if ((this.y>470 && this.y<560) && (this.x>920)){
                 let pirilampo3 = document.getElementsByClassName('firefly3')[0];
@@ -74,30 +74,31 @@ class Player {
                 document.getElementById('fireflyaudio').play();
                 this.fireflycounter3=false;
                 }
-                textopirilampo.innerHTML="3/3";
+                textopirilampo.innerHTML=`${this.counter}/3`;
             }
             else if ((this.y>68 && this.y<132)&&(this.x>470 && this.x<530)){
             let pirilampoL21 = document.getElementsByClassName('L2firefly1')[0];
             pirilampoL21.style.display= 'none';
-            this.counter=1;
+            this.counter+=1;
             this.gifcounter=false;
             this.textocounter=false;
             if (this.L2fireflycounter===true){
                 document.getElementById('fireflyaudio').play();
                 this.fireflycounter=false;
             }
-            textopirilampo.innerHTML="1/2";
+            textopirilampo.innerHTML=`${this.counter}/2`;
             }
             else if ((this.y>600 && this.y<650)&&(this.x>270 && this.x<320)){
                 let pirilampoL22 = document.getElementsByClassName('L2firefly2')[0];
                 pirilampoL22.style.display= 'none';
                 this.counter+=1;
                 this.gifcounter1=false;
+                this.textocounter=false;
                 if (this.L2firefly2counter===true){
                     document.getElementById('fireflyaudio').play();
                     this.fireflycounter=false;
                 }
-                textopirilampo.innerHTML="2/2";
+                textopirilampo.innerHTML=`${this.counter}/2`;
                 }
             break;
             case 37:

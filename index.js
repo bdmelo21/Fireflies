@@ -262,6 +262,7 @@ function secondLevel(){
     if(counter===true){
     currentGame.player.x=900;
     currentGame.player.y=100;
+    currentGame.player.counter=0;
     counter=false;
     }
    
