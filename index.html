@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-<div id="game-board">
-<canvas id="the-canvas" width="1094" height="700"></canvas>
-<img src="ezgif.com-gif-maker.gif" alt="firefly" class="firefly1"/>
-<img src="ezgif.com-gif-maker.gif"alt="firefly" class="firefly2"/>
-<img src="ezgif.com-gif-maker.gif" alt="firefly" class="firefly3"/>
-<img src="ezgif.com-gif-maker.gif" alt="firefly" class="L2firefly1"/>
-<img src="ezgif.com-gif-maker.gif" alt="firefly" class="L2firefly2"/>
-<audio id="fireflyaudio" controls style="display:none">
-    <source src="firefly.wav" type= "audio/mpeg"> Your browser does not support the audio element.
-</audio>
-<audio id="jump" controls style="display:none">
-    <source src="[JUMP] Casual Game SFX_1.wav" type="audio/mpeg"> Your browser does not support the audio element.
-</audio>
-    <audio id="baloon" controls style="display:none">
-        <source src="[JUMP] Casual Game SFX_4.wav" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio>
-    <audio id="damage" controls style="display:none">
-        <source src="[JUMP] Casual Game SFX_5.wav" type="audio/mpeg"> Your browser does not support the audio element.
-    </audio>
-<audio id="lastaudio" controls style="display:none">
-        <source src="Audio-Bus256.wav" type= "audio/mpeg"> Your browser does not support the audio element.
-</audio>
-</div>
-<div class="board">
-<h3 class="level1">Level 1</h3>
-<div class= 'rightdiv'>
-<div class="Flex">
-<img src="a10e402c50554f1.gif" alt="heart" class="heart">
-<h3 class= "lifes">x1</h3>
-</div>
-<div class="Flex2">
-<img src="ezgif.com-gif-maker.gif" alt="fireflies" class="fireflies">
-<h3 class= "nfireflies">0/3</h3>
-</div>
-<div>
-    <audio id="controls" controls style="display:none">
-        <source src="A minha música 7 (online-audio-converter.com).wav" type="audio/mp3">
-    </audio>
-</div>
-</div>
-</div>
-<script src="player.js"></script>
-<script src="Game.js"></script>
-<script src="index.js"></script>
+    <div id="game-board">
+        <canvas id="the-canvas" width="1094" height="700"></canvas>
+        <img src="images/Fireflies.gif" alt="firefly" class="firefly1" />
+        <img src="images/Fireflies.gif" alt="firefly" class="firefly2" />
+        <img src="images/Fireflies.gif" alt="firefly" class="firefly3" />
+        <img src="images/Fireflies.gif" alt="firefly" class="L2firefly1" />
+        <img src="images/Fireflies.gif" alt="firefly" class="L2firefly2" />
+        <audio id="fireflyaudio" controls style="display:none">
+            <source src="music/SFX_Firefly.wav" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+        <audio id="jump" controls style="display:none">
+            <source src="music/SFX_Jump.wav" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+        <audio id="baloon" controls style="display:none">
+            <source src="music/SFX_Great.wav" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+        <audio id="damage" controls style="display:none">
+            <source src="music/SFX_Fail.wav" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+        <audio id="lastaudio" controls style="display:none">
+            <source src="music/RainLastSong1.wav" type="audio/mpeg"> Your browser does not support the audio element.
+        </audio>
+    </div>
+    <div class="board">
+        <h3 class="level1">Level 1</h3>
+        <div class='rightdiv'>
+            <div class="Flex">
+                <img src="images/heartGame.gif" alt="heart" class="heart">
+                <h3 class="lifes">x1</h3>
+            </div>
+            <div class="Flex2">
+                <img src="images/Fireflies.gif" alt="fireflies" class="fireflies">
+                <h3 class="nfireflies">0/3</h3>
+            </div>
+            <div>
+                <audio id="controls" controls style="display:none">
+                    <source src="music/Soundtrack.wav" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </div>
+    <script src="player.js"></script>
+    <script src="Game.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
